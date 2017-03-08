@@ -3,19 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<title>JFActionResultsV</title>
+<title>JFActionResults</title>
 <link href="/stylesheets/JFSampleCSS.css" rel="stylesheet"  type="text/css">
 <link href="/stylesheets/JFSHomeCSS.css" rel="stylesheet"  type="text/css">
 <link href="/stylesheets/bootstrap.css" rel="stylesheet">
 <script src="/javascripts/bootstrap.min.js"></script>
 
 </head>
-<link href="//public/stylesheets/bootstrap.css" rel="stylesheet">
 <body>
 
 <div class="wrapper">
 	<div class="header">
-	<img src="//public/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
+	<img src="/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
 	<a href="https://jfhealthcheck.mybluemix.net/">Home</a>
 	</div>
 	<div class="content">

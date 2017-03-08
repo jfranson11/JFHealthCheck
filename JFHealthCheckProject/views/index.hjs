@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ title }</title>
+<title>{{ title }}</title>
 
 <link rel='stylesheet' href='/stylesheets/JFSample.css' />
 <link rel='stylesheet' href='/stylesheets/JFHomeCSS.css' />
@@ -14,7 +14,7 @@
 <body>
 <div class="wrapper">
 <div class="header">
-
+<img src="/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
 <a href="https://jfhealthcheck.mybluemix.net/">Home</a>
 </div>
 	<div class="content-box1"><p>Box 1</p></div>
