@@ -64,6 +64,7 @@
 		var heightsquared = parseInt({{personheight}}) * parseInt({{personheight}})
 		var temp = weight / heightsquared;
 		var bmi = temp * 703;
+		bmi = bmi.toFixed(2);
 		document.write(bmi);
 		</script>
 						</td>
@@ -72,6 +73,7 @@
 <!-- The waist-hip ratio equals the waist circumference divided by the hip circumference. -->
 		<script type="text/javascript" language="javascript" charset="utf-8">
 		var whr = parseInt({{personwaist}}) / parseInt({{personhips}});
+		whr = whr.toFixed(2);
 		document.write(whr);
 		</script>
 						</td>

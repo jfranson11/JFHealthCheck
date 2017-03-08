@@ -39,6 +39,7 @@ function CalculateBMI(x,y)
 	heightsquared = eval(x) * eval(x);
 	tempfloat = eval(y) * 1000 / heightsquared;
 	bmi = tempfloat * 703 / 1000;
+	bmi = bmi.toFixed(2);
 	document.calculatebmiform.bmi.value=bmi;
 }
 </script>
@@ -47,6 +48,7 @@ function CalculateBMI(x,y)
 function CalculateWHRatio(x,y)
 {
 	whratio = eval(x) / eval(y);
+	whratio = whratio.toFixed(2);
 	document.calculatewhratioform.whratio.value=whratio;
 }
 </script>
