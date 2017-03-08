@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>JFCalculations</title>
+<link href="/stylesheets/JFSampleCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/JFHomeCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/bootstrap.css" rel="stylesheet"/>
+<script src="/javascripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div class="header">
+	<img src="/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
+	<a href="https://jfhealthcheck.mybluemix.net/">Home</a>
+	</div>
+	<div class="content">
+<div id="content-left" class="content-left">
+<br></br>
+<a href="JFCalculations.html">Key health calculations</a>
+<br></br>
+<a href="JFForm.html">JFForm</a>
+<br></br>
+<a href="http://www.cdc.gov" target="_blank">CDC</a>
+<br></br>
+<a href="http://www.nih.gov" target="_blank">NIH</a>
+</div>
+
+
+<!-- Begin div "content-main" -->
+		<div class="content-main">
+
+
+<script language="JavaScript" >
+function CalculateBMI(x,y)
+{
+	heightsquared = eval(x) * eval(x);
+	tempfloat = eval(y) * 1000 / heightsquared;
+	bmi = tempfloat * 703 / 1000;
+	document.calculatebmiform.bmi.value=bmi;
+}
+</script>
+
+<script language="JavaScript" >
+function CalculateWHRatio(x,y)
+{
+	whratio = eval(x) / eval(y);
+	document.calculatewhratioform.whratio.value=whratio;
+}
+</script>
+
+
+		<h3>Calculate BMI</h3>
+
+		<form name ="calculatebmi" method="post" action="listpeople">
+<table>
+<tr>
+			<td><label for="height">Height (inches)</label></td>
+			<td><input type="text" name="height" size="3"><br></td>
+</tr><tr>
+			<td><label for="weight">Weight (pounds)</label></td>
+			<td><input type="text" name="weight" size="3"><br></td>
+</tr><tr>
+			<td><input type="button" onclick="CalculateBMI(this.form.height.value,this.form.weight.value)" value="Calculate BMI"></td>
+			<td><label for="bmi">BMI = </label></td>
+			<td><input type="text" id="bmi" name="bmi"></input> </td>
+</tr><tr>
+			<td><input type="submit" value="List all people"/></td>
+			<td><input type="reset" value="Reset Form"/></td>
+</tr>
+</table>
+		</form>
+
+		<h3>Calculate Waist to Hips Ratio</h3>
+
+		<form name ="calculatewhratioform" method="post" action="listpeople">
+<table>
+<tr>
+			<td><label for="waist">Waist (inches)</label></td>
+			<td><input type="text" name="waist" size="3"><br></td>
+</tr><tr>
+			<td><label for="hips">Hips (inches)</label></td>
+			<td><input type="text" name="hips" size="3"><br></td>
+</tr><tr>
+			<td><input type="button" onclick="CalculateWHRatio(this.form.waist.value,this.form.hips.value)" value="Calculate WHRatio"></td>
+			<td><label for="whratio">Waist to Hips Ratio = </label></td>
+			<td><input type="text" id="whratio" name="whratio"></input></td>
+</tr><tr>
+			<td><input type="submit" value="List all people"/></td>
+			<td><input type="reset" value="Reset Form"/></td>
+</tr>
+</table>
+		</form>
+<p>
+	<a href="https://jfhealthcheck.mybluemix.net/JFKeyMeasurements.html">Interpret Results</a>
+</p>
+		</div>
+<!-- End div "content-main" -->
+
+		<div class="content-right">
+This is some text in the right box.
+		</div>
+		</div>
+	<div id="footer" class="footer">
+This Web Site is brought to you by the folks at JF
+	</div>
+	<div class="bottom">Bottom</div>
+</div>
+
+</body>
+</html>

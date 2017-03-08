@@ -1,0 +1,12 @@
+---
+declared-services:
+  ClearDB MySQL Database-qf:
+    label: mysql
+    plan: '100'
+applications:
+- name: JFHealthCheck
+  memory: 512M
+  host: JFHealthCheck
+  domain: mybluemix.net
+  services:
+  - ClearDB MySQL Database-qf

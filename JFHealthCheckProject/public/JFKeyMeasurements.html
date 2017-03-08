@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>JFKeyMeasurementsP</title>
+<link href="/stylesheets/JFSampleCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/JFHomeCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/bootstrap.css" rel="stylesheet"/>
+<script src="/javascripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div class="header">
+	<img src="/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
+	<a href="https://jfhealthcheck.mybluemix.net/">Home</a>
+	</div>
+	<div class="content">
+<div id="content-left" class="content-left">
+<br></br>
+<a href="JFCalculations.html">Key health calculations</a>
+<br></br>
+<a href="JFForm.html">JFForm</a>
+<br></br>
+<a href="http://www.cdc.gov" target="_blank">CDC</a>
+<br></br>
+<a href="http://www.nih.gov" target="_blank">NIH</a>
+</div>
+
+		<div class="content-main"> <!-- Begin div "content-main" -->
+
+<h4>Key Measurements for Health</h4>
+<p>
+1. Blood pressure - when your heart beats it pumps blood out of the heart into the blood vessles of your body.  The systolic or top reading is the number that measures the pressure during the time when your heart pumps or contracts making the blood move into the arteries.  The bottom number is called the diastolic pressure, and this reading indicates the pressure in your body when your heart relaxes after the contraction.  It was previously thought that blood pressure of 120/80 was healthy, but now many doctors are advising their patients that their blood pressure numbers should be 115/76 or less.
+</p>
+<p>
+2. Cholesterol - Naturally occuring in the body, cholesterol is a type of fat, and your body needs a certain amount of cholesterol in order to function properly.  There are three numbers that are important to know with regards to your cholesterol.
+</p>
+<p>Total Cholesterol this should be less than 200</p>
+<p>HDL - or good cholesterol - should be more than 40 for men or more than 50 for a woman</p>
+<p>LDL or bad cholesterol - should be less than 100</p>
+<p>
+3. BMI- Body Mass Index or BMI is a measurement of body fat in adults.    Body Mass Index (BMI) is a number calculated from a person's weight and height.  BMI provides a reliable indicator of body fatness for most people and is used to screen for weight categories that may lead to health problems.  What the numbers mean:
+</p>
+<table>
+<tr>
+<td><b>Weight</b></td>
+<td><b>Status</b></td>
+</tr>
+<tr>
+<td>Below 18.5</td>
+<td>Underweight</td>
+</tr>
+<tr>
+<td>18.5 - 24.9</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>25.0 - 29.9</td>
+<td>Overweight</td>
+</tr>
+<tr>
+<td>30.0 and above</td>
+<td>Obese</td>
+</tr>
+</table>
+<p>
+Over 32% of adults in the United States over 20 years of age are considered obese. Obesity puts you at risk for conditions such as high blood pressure or hypertension, cancer, diabetes, and heart disease.
+</p>
+<p>
+4.  Waist-hip Ratio = waist circumference divided by hip circumference.  The Waist to Hip Ratio Calculator indicates your probable health risks.  People with more weight around the waist, face more health risks than people who carry more weight around their hips.  People who store most of their body fat around their waists have an increased risk of high blood pressure, type 2 diabetes, heart disease and stroke compared with those who have the same amount of body fat stored around their hips and thighs.  If your ratio is below 0.8, your body type is considered pear-shaped.  This number alone, however, does not necessarily mean you don't need to lose weight.  This calculator on its own is extremely limiting, so to determine if you could stand to drop a few pounds, use the BMI Calculator as well. These numbers in combination will give you a clearer picture of your overall health.  If your ratio is greater than 0.8, your body shape is 'apple', and you might be at an increased risk for diseases and health conditions such as heart disease and diabetes.
+</p>
+
+
+		</div> <!-- End div "content-main" -->
+
+		<div class="content-right">
+
+<script type="text/javascript">
+var http = createRequestObject();
+function createRequestObject() {
+   var objAjax;
+   var browser = navigator.appName;
+   if(browser == "Microsoft Internet Explorer"){
+      objAjax = new ActiveXObject("Microsoft.XMLHTTP");
+   }else{
+      objAjax = new XMLHttpRequest();
+   }
+   return objAjax;
+}
+
+function getNewContent(){
+   http.open('get','MoreKeyMeasurements.txt');
+   http.onreadystatechange = updateNewContent;
+
+
+   http.send(null);
+   return false;
+}
+
+function updateNewContent(){
+   if(http.readyState == 4){
+      document.getElementById('mySentence').innerHTML = http.responseText;
+   }
+}
+
+</script>
+
+<p id="mySentence"><a href="#" onclick="javascript:getNewContent();">Click here to see more key measurements</a>. When you click the link, this content will be replaced.</p>
+
+
+		</div>
+	</div>
+	<div id="footer" class="footer">
+This Web Site is brought to you by the folks at JF
+	</div>
+	<div class="bottom">Bottom</div>
+</div>
+
+</body>
+</html>

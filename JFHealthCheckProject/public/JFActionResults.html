@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>JFActionResultsP</title>
+<link href="//public/stylesheets/JFSampleCSS.css" rel="stylesheet"  type="text/css">
+<link href="//public/stylesheets/JFSHomeCSS.css" rel="stylesheet"  type="text/css">
+<link href="//public/stylesheets/bootstrap.css" rel="stylesheet">
+<script src="//public/javascripts/bootstrap.min.js"></script>pt>
+
+</head>
+<link href="//public/stylesheets/bootstrap.css" rel="stylesheet">
+<body>
+
+<div class="wrapper">
+	<div class="header">
+	<img src="//public/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
+	<a href="https://jfhealthcheck.mybluemix.net/">Home</a>
+	</div>
+	<div class="content">
+<div id="content-left" class="content-left">
+<br></br>
+<a href="JFCalculations.html">Key health calculations</a>
+<br></br>
+<a href="JFForm.html">JFForm</a>
+<br></br>
+<a href="http://www.cdc.gov" target="_blank">CDC</a>
+<br></br>
+<a href="http://www.nih.gov" target="_blank">NIH</a>
+</div>
+
+		<div class="content-main"> <!-- Begin div "content-main" -->
+			<p>
+				        {{#msg}}<div class="alert alert-info">{{msg}}</div>{{/msg}}
+			</p>
+			<br></br>
+      <div>
+        <table class="table">
+					<tr>
+						<td>Id Number</td>
+						<td>First Name</td>
+						<td>Last name</td>
+						<td>Height</td>
+						<td>Weight</td>
+						<td>Waist</td>
+						<td>Hips</td>
+						<td>BMI</td>
+						<td>WH Ratio</td>
+					</tr>
+          {{#people}}
+          <tr>
+            <td>{{personidnumber}}</td>
+            <td>{{personfirstname}}</td>
+            <td>{{personlastname}}</td>
+            <td>{{personheight}}</td>
+            <td>{{personweight}}</td>
+            <td>{{personwaist}}</td>
+            <td>{{personhips}}</td>
+
+						<td>
+<!-- BMI = ( Weight in Pounds / ( Height in inches x Height in inches ) ) x 703 -->
+		<script type="text/javascript" language="javascript" charset="utf-8">
+		var weight = parseInt({{personweight}});
+		var heightsquared = parseInt({{personheight}}) * parseInt({{personheight}})
+		var temp = weight / heightsquared;
+		var bmi = temp * 703;
+		document.write(bmi);
+		</script>
+						</td>
+
+						<td>
+<!-- The waist-hip ratio equals the waist circumference divided by the hip circumference. -->
+		<script type="text/javascript" language="javascript" charset="utf-8">
+		var whr = parseInt({{personwaist}}) / parseInt({{personhips}});
+		document.write(whr);
+		</script>
+						</td>
+
+          </tr>
+          {{/people}}
+        </table>
+      </div>
+
+		</div> <!-- End div "content-main" -->
+
+		<div class="content-right">
+This is some text in the right box.
+		</div>
+	</div>
+	<div id="footer" class="footer">
+This Web Site is brought to you by the folks at JF
+	</div>
+	<div class="bottom">Bottom</div>
+</div>
+
+
+
+</body>
+</html>

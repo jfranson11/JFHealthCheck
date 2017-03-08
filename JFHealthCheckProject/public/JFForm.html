@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>JFForm</title>
+<link href="/stylesheets/JFSampleCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/JFHomeCSS.css" rel="stylesheet"  type="text/css"/>
+<link href="/stylesheets/bootstrap.css" rel="stylesheet"/>
+<script src="/javascripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div class="header">
+	<img src="/images/Helix.jpg" alt="Helix" height="5%" width="5%" hspace="20">
+	<a href="https://jfhealthcheck.mybluemix.net/">Home</a>
+	</div>
+	<div class="content">
+<div id="content-left" class="content-left">
+<br></br>
+<a href="JFCalculations.html">Key health calculations</a>
+<br></br>
+<a href="JFForm.html">JFForm</a>
+<br></br>
+<a href="http://www.cdc.gov" target="_blank">CDC</a>
+<br></br>
+<a href="http://www.nih.gov" target="_blank">NIH</a>
+</div>
+
+		<div class="content-main"> <!-- Begin div "content-main" -->
+
+		<h3>Add person </h3>
+		<form method="post" action="addperson">
+		<table>
+		<tr>
+			<td><label for="idnumber">ID Number</label></td>
+			<td><input type="text" id="idnumber" name="idnumber"/></td>
+		</tr><tr>
+			<td><label for="firstname">First Name</label></td>
+			<td><input type="text" id="firstname" name="firstname"/></td>
+		</tr><tr>
+			<td><label for="lastname">Last Name</label></td>
+			<td><input type="text" id="lastname" name="lastname"/></td>
+		</tr><tr>
+			<td><label for="height">Height</label></td>
+			<td><input type="text" id="height" name="height"/></td>
+		</tr><tr>
+			<td><label for="weight">Weight</label></td>
+			<td><input type="text" id="weight" name="weight"/></td>
+		</tr><tr>
+			<td><label for="waist">Waist</label></td>
+			<td><input type="text" id="waist" name="waist"/></td>
+		</tr><tr>
+			<td><label for="hips">Hips</label></td>
+			<td><input type="text" id="hips" name="hips"/></td>
+		</tr>
+		</table>
+			<input type="hidden" id="formaction" value="addperson" name="formaction"/>
+			<input type="submit" value="Submit Form"/>
+			<input type="reset" value="Reset Form"/>
+		</form>
+		<br></br>
+		<h3>Delete person</h3>
+		<form method="post" action="deleteperson">
+			<label for="name">ID Number</label>
+			<input type="text" id="idnumber" name="idnumber"/><br>
+			<input type="hidden" id="=height" value="1" name="height"/>
+			<input type="hidden" id="=weight" value="1" name="weight"/>
+			<input type="hidden" id="=waist" value="1" name="waist"/>
+			<input type="hidden" id="=hips" value="1" name="hips"/>
+			<input type="hidden" id="formaction" value="deleteperson" name="formaction"/>
+			<input type="submit" value="Submit Form"/>
+			<input type="reset" value="Reset Form"/>
+		</form>
+		<br></br>
+		<h3>Update person </h3>
+		<form method="post" action="updateperson">
+		<table>
+		<tr>
+			<td><label for="idnumber">ID Number</label></td>
+			<td><input type="text" id="idnumber" name="idnumber"/></td>
+		</tr><tr>
+			<td><label for="firstname">First Name</label></td>
+			<td><input type="text" id="firstname" name="firstname"/></td>
+		</tr><tr>
+			<td><label for="lastname">Last Name</label></td>
+			<td><input type="text" id="lastname" name="lastname"/></td>
+		</tr><tr>
+			<td><label for="height">Height</label></td>
+			<td><input type="text" id="height" name="height"/></td>
+		</tr><tr>
+			<td><label for="weight">Weight</label></td>
+			<td><input type="text" id="weight" name="weight"/></td>
+		</tr><tr>
+			<td><label for="waist">Waist</label></td>
+			<td><input type="text" id="waist" name="waist"/></td>
+		</tr><tr>
+			<td><label for="hips">Hips</label></td>
+			<td><input type="text" id="hips" name="hips"/></td>
+		</tr>
+		</table>
+			<input type="hidden" id="formaction" value="updateperson" name="formaction"/>
+			<input type="submit" value="Submit Form"/>
+			<input type="reset" value="Reset Form"/>
+		</form>
+		<br></br>
+		<h3>List people (enter 0 for all)</h3>
+		<form method="post" action="listpeople">
+			<label for="name">ID Number</label>
+			<input type="text" id="idnumber" name="idnumber"/><br>
+			<input type="hidden" id="=height" value="1" name="height"/>
+			<input type="hidden" id="=weight" value="1" name="weight"/>
+			<input type="hidden" id="=waist" value="1" name="waist"/>
+			<input type="hidden" id="=hips" value="1" name="hips"/>
+			<input type="hidden" id="formaction" value="listpeople" name="formaction"/>
+			<input type="submit" value="Submit Form"/>
+			<input type="reset" value="Reset Form"/>
+		</form>
+<br></br>
+		</div> <!-- End div "content-main" -->
+
+		<div class="content-right">
+This is some text in the right box.
+		</div>
+
+	</div>
+	<div id="footer" class="footer">
+This Web Site is brought to you by the folks at JF
+	</div>
+	<div class="bottom">Bottom</div>
+</div>
+
+</body>
+</html>
